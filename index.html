@@ -131,7 +131,7 @@
             border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* Hero Section - Only Introduction */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -322,10 +322,10 @@
             line-height: 1.6;
         }
 
-        /* About Section */
+        /* About Section - Only Personal Info & Background */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 80px;
             align-items: start;
         }
@@ -339,8 +339,8 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
+            grid-template-columns: 1fr;
+            gap: 24px;
         }
 
         .stat-item {
@@ -364,7 +364,7 @@
             font-weight: 500;
         }
 
-        /* Skills Section */
+        /* Skills Section - Only Technical Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -423,7 +423,13 @@
             border-color: var(--primary);
         }
 
-        /* Experience Section */
+        /* Experience Section - Only Work Experience */
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .experience-item {
             background: white;
             padding: 40px;
@@ -432,6 +438,7 @@
             border: 1px solid var(--border);
             border-left: 4px solid var(--primary);
             margin-bottom: 32px;
+            position: relative;
         }
 
         .experience-header {
@@ -492,7 +499,7 @@
             font-weight: bold;
         }
 
-        /* Projects Section */
+        /* Projects Section - Only Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -572,18 +579,23 @@
             color: var(--primary-dark);
         }
 
-        /* Contact Section */
+        /* Contact Section - Only Contact Information */
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 80px;
         }
 
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
         .contact-item {
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 24px;
             padding: 20px;
             background: white;
             border-radius: 12px;
@@ -607,6 +619,7 @@
             align-items: center;
             justify-content: center;
             font-size: 20px;
+            flex-shrink: 0;
         }
 
         .contact-details h4 {
@@ -802,7 +815,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - ONLY Introduction & Welcome -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -835,12 +848,12 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - ONLY Personal Background & Education -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-header">
                 <h2>About Me</h2>
-                <p>Passionate computer engineer with expertise in full-stack development, machine learning, and cloud technologies</p>
+                <p>Passionate computer engineer with a strong academic foundation and drive for excellence</p>
             </div>
             <div class="about-content">
                 <div>
@@ -848,7 +861,10 @@
                         Currently pursuing my Bachelor's in Computer Engineering at the University of Peradeniya with a CGPA of 3.30/4.0. I ranked 29th in my district and 629th island-wide in A/Levels, demonstrating my commitment to academic excellence.
                     </p>
                     <p class="about-text">
-                        My passion lies in solving real-world problems through impactful software solutions. I have hands-on experience in RESTful API development, microservices architecture, and cloud computing with AWS. I thrive in agile environments and am driven by continuous learning and collaboration.
+                        My passion lies in solving real-world problems through impactful software solutions. I believe in continuous learning, collaboration, and pushing the boundaries of what's possible with technology. When I'm not coding, I enjoy exploring new technologies and contributing to open-source projects.
+                    </p>
+                    <p class="about-text">
+                        I thrive in challenging environments where I can apply my analytical thinking and problem-solving skills to create meaningful solutions that make a difference.
                     </p>
                 </div>
                 <div class="stats-grid">
@@ -857,23 +873,23 @@
                         <div class="stat-label">CGPA</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">6+</div>
-                        <div class="stat-label">Months Internship</div>
+                        <div class="stat-number">29th</div>
+                        <div class="stat-label">District Rank</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Technologies</div>
+                        <div class="stat-number">629th</div>
+                        <div class="stat-label">Island Rank</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">8+</div>
-                        <div class="stat-label">Major Projects</div>
+                        <div class="stat-number">2025</div>
+                        <div class="stat-label">Graduation Year</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section - ONLY Technical Skills -->
     <section id="skills" class="section section-alt">
         <div class="container">
             <div class="section-header">
@@ -942,22 +958,4 @@
                         <span class="skill-tag">Mockito</span>
                         <span class="skill-tag">GitHub</span>
                         <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">IntelliJ IDEA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Professional Experience</h2>
-                <p>Real-world experience in machine learning engineering and software development</p>
-            </div>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3>Machine Learning Engineer Intern</h3>
-                        <p class="experience-company">IronOne Technologies (Pvt) Ltd</p>
+                        <span class="skill-tag">In
